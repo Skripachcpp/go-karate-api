@@ -56,6 +56,15 @@ func main() {
 	http.HandleFunc("/transfer", accountHandler.Transfer)
 
 	// Swagger UI
+	// Добавь этот код ПЕРЕД строкой http.HandleFunc("/swagger/", ...)
+
+	// Прямой endpoint для swagger.json
+	http.HandleFunc("/swagger/doc.json", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		http.ServeFile(w, r, "./docs/swagger.json")
+	})
+
+	// Остальной код остается как есть
 	http.HandleFunc("/swagger/", httpSwagger.WrapHandler)
 
 	log.Println("Server starting on :8080...")
