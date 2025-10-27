@@ -1,3 +1,4 @@
+// # Менеджер зависимостей Go
 module accounting-core
 
 go 1.24.6

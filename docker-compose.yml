@@ -1,3 +1,4 @@
+# Конфигурация базы данных
 version: '3.8'
 services:
   postgres:
