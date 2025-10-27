@@ -3,7 +3,7 @@ services:
   postgres:
     image: postgres:13
     environment:
-      POSTGRES_DB: accounting
+      POSTGRES_DB: accounting  # ← Теперь база создается автоматически
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
     ports:
