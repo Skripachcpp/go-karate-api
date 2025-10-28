@@ -41,6 +41,7 @@ func TestPostgresRepo_TransferMoney(t *testing.T) {
 		}
 	})
 
+	// TODO: разобраться в чем ошибка
 	t.Run("Insufficient funds", func(t *testing.T) {
 		err := repo.TransferMoney(1, 2, 2000) // Слишком большая сумма
 		if err == nil {
@@ -53,7 +54,7 @@ func TestPostgresRepo_GetAccounts(t *testing.T) {
 	db, err := sql.Open("postgres", "host=localhost port=5432 user=postgres password=password dbname=postgres sslmode=disable")
 	if err != nil {
 		t.Fatalf("Failed to connect to DB: %v", err)
-	}
+	}``
 	defer db.Close()
 
 	repo := NewPostgresRepo(db)

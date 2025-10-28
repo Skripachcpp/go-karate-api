@@ -7,13 +7,13 @@ docker exec -it accounting-core-postgres-1 psql -U postgres -d postgres -c "\dt"
 # Подключиться к PostgreSQL интерактивно
 docker exec -it accounting-core-postgres-1 psql -U postgres -d postgres
 
+# пример запроса
 /transfer
 {
   "amount": 100,
   "credit_account_id": 2,
   "debit_account_id": 1
 }
-
 
 # Запуск всех тестов
 go test ./...
@@ -27,3 +27,7 @@ go test -v ./internal/handler
 
 # Запуск с покрытием
 go test -cover ./...
+
+# запустить проект
+docker-compose up -d 
+go run cmd/server/main.go
