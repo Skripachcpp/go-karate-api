@@ -1,0 +1,45 @@
+cat > .gitignore << 'EOF'
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# IDE and editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Go specific
+/bin/
+/pkg/
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# Docker
+docker-data/
+
+__*
