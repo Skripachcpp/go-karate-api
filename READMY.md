@@ -13,3 +13,17 @@ docker exec -it accounting-core-postgres-1 psql -U postgres -d postgres
   "credit_account_id": 2,
   "debit_account_id": 1
 }
+
+
+# Запуск всех тестов
+go test ./...
+
+# Запуск тестов с verbose
+go test -v ./...
+
+# Запуск тестов конкретного пакета
+go test -v ./internal/repository
+go test -v ./internal/handler
+
+# Запуск с покрытием
+go test -cover ./...
