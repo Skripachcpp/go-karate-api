@@ -1,3 +1,5 @@
+Это автогенерации с ИИ. Мне было просто любопытно собрать тестовый проект.
+
 # Подключиться к БД и выполнить файлы
 psql -h localhost -U postgres -d accounting -f migrations/001_create_tables.sql
 
